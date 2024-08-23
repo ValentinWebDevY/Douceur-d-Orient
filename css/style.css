@@ -1,0 +1,1130 @@
+/* ========== SETTINGS ========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    letter-spacing: 1px;
+
+
+    /* COLORS */
+    --bg-color: #EDE6E6;
+    --gold: #D5AC5B;
+    --darker-font: #663C3B;
+    --lighter-font: #CEC0B9;
+}
+
+h1, h2, h3, p {
+    margin: 0 1.5rem;
+}
+
+h1, .end-h1 {
+    text-align: center;
+    font-size: 2.369rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    /*font-size: 1.777rem;*/
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+    /*font-size: 1.333rem;*/
+}
+
+.gold-h3 {
+    color: var(--gold);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: 4rem;
+}
+
+input, textarea, button {
+    font-family: "Work Sans", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ========== END SETTINGS ========== */
+
+/* ========== MOBILE NAVBAR ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darker-font);
+    height: 5rem;
+    padding: 0 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+}
+
+/* menu with links */
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+
+    width: 100%;
+    height: 65dvh;
+
+    background-color: var(--darker-font);
+    top: -100%;
+    left: 0;
+    margin-top: 5rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: top 0.5s ease-in-out;
+}
+
+.line-hamburger {
+    display: flex;
+    align-items: center;
+    background-color: var(--gold);
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+
+    /* animation burger */
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+.mobile-menu-icons {
+    width: 2.5rem;
+}
+
+/* center burger link */
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 1.5rem;
+}
+
+/* JS BURGER */
+.nav-menu.active {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+
+/* rotate first line */
+.hamburger.active .line-hamburger:nth-child(1) {
+    transform: translateY(8px) rotate(-315deg);
+}
+
+/* remove second line */
+.hamburger.active .line-hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+/* rotate third line */
+.hamburger.active .line-hamburger:nth-child(3) {
+    transform: translateY(-8px) rotate(-225deg);
+}
+
+/* ========== END MOBILE NAVBAR ========== */
+
+/* ========== HEADER ========== */
+
+/* style main title */
+h1 {
+    padding-right: 10rem;
+}
+
+.end-h1 {
+    padding-left: 10rem;
+}
+
+.letter-D {
+    font-family: "Cinzel Decorative", serif;
+    color: var(--darker-font);
+}
+
+.letter-O {
+    font-family: "Cinzel Decorative", serif;
+}
+
+.letter-O, .letter-R {
+    color: var(--gold);
+}
+
+/* end style main title */
+
+.header-container {
+    /* move from the top */
+    padding-top: 5rem;
+
+    /* display grid only use to center all my element */
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+}
+
+.framed-header {
+    width: 21rem;
+    border: 5px solid var(--gold);
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.4));
+    margin-top: 2rem;
+    /* frame behind my img */
+    z-index: -1;
+}
+
+/* push my img outside the frame */
+.img-header {
+    margin-left: -2rem;
+    margin-bottom: -2rem;
+}
+
+.txt-intro {
+    text-align: left;
+    font-size: 1.33rem;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.socials-media {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.social-media {
+    width: 2rem;
+}
+
+/* ========== END HEADER ========== */
+
+/* ========== UNIVERS SECTION ========== */
+#univers {
+    /* put bg color from top to bottom, --lighter-font takes 60% of #univers */
+    background-image: linear-gradient(to bottom, var(--lighter-font) 60%, rgba(0, 0, 0, 0) 20%);
+}
+
+.grid-container-univers {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.dark-card-univers, .light-card-univers {
+    display: grid;
+    background-color: var(--darker-font);
+    text-align: justify;
+    color: white;
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+
+    width: 20rem;
+    margin: 2rem 0;
+    justify-items: center;
+    padding: 2rem 0;
+    gap: 1.5rem;
+}
+
+.dark-card-univers > h3, .light-card-univers > h3 {
+    text-align: center;
+}
+
+.light-card-univers {
+    background-color: white;
+    color: black;
+}
+
+.icon {
+    width: 3.438rem;
+}
+
+/* btn see more */
+.see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold);
+    background-color: var(--darker-font);
+    border: none;
+    border-radius: 5px;
+
+    width: 10rem;
+    padding: .5rem;
+    margin-bottom: 2rem;
+
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+.see-more > img {
+    width: 2rem;
+}
+
+/* ========== END UNIVERS SECTION ========== */
+
+/* ========== UNIVERS PAGE ========== */
+
+.subpage-main-title {
+    padding: 7rem 0 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    text-align: left;
+}
+
+
+/* ========== END UNIVERS PAGE ========== */
+
+/* ========== BEST SECTION ========== */
+
+.best-cards-container {
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+}
+
+/* one best sellers card container */
+.best-sellers-card {
+    display: grid;
+    gap: .650rem;
+    width: 17rem;
+}
+
+.best-frame {
+    border: 2px solid var(--gold);
+
+    width: 15rem;
+    /* border away from my img */
+    padding-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+/* img outside my border */
+.img-best {
+    margin-left: -1.5rem;
+    margin-bottom: -1.5rem;
+}
+
+.best-sellers-card > p {
+    margin: 0 .5rem;
+}
+
+/* subtitle away from my img and frame + bold */
+.best-title {
+    padding-top: 1.5rem;
+    font-weight: bold;
+}
+
+/* ========== END BEST SECTION ========== */
+
+/* ========== ORIGINES SECTION ========== */
+
+.origins-container {
+    display: grid;
+    justify-items: center;
+}
+
+.origins-content {
+    background-color: var(--lighter-font);
+    padding: 2rem 1rem;
+}
+
+.origins-content > h3 {
+    margin-bottom: 2rem;
+    font-weight: bold
+}
+
+.cacao-frame {
+    width: 18rem;
+    border: 2px solid var(--gold);
+    margin: 3rem 0;
+}
+
+.cacao-frame > img {
+    margin-bottom: -2rem;
+}
+
+/* ========== END ORIGINES SECTION ========== */
+
+/* ========== MINI GALLERY SECTION ========== */
+
+.hover-txt {
+    display: none;
+}
+
+.mini-gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1.25rem;
+    margin: 0 1rem 2rem 1rem;
+    grid-template-areas:
+    "small1 big1"
+    "big2   big1"
+    "big2   small2"
+    "small3 big3"
+    "big4   big3"
+    "big4   small4";
+}
+
+/* img takes full space */
+.mini-gallery-container > a > img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.small-img1 {
+    grid-area: small1;
+}
+
+.big-img1 {
+    grid-area: big1;
+}
+
+.small-img2 {
+    grid-area: small2;
+}
+
+.big-img2 {
+    grid-area: big2;
+}
+
+.small-img3 {
+    grid-area: small3;
+}
+
+.big-img3 {
+    grid-area: big3;
+}
+
+.small-img4 {
+    grid-area: small4;
+}
+
+.big-img4 {
+    grid-area: big4;
+}
+
+/* ========== END MINI GALLERY SECTION ========== */
+
+/* ========== POP UP NEWSLETTER ========== */
+
+.pop-up-box {
+    background-color: var(--lighter-font);
+    /*border: 1px solid black;*/
+    margin: 0 2rem;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+    position: fixed;
+    top: -100%;
+    z-index: 99;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+    transition: top 0.5s ease;
+}
+
+.pop-up-box > img {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.pop-up-grid-container {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.pop-up-grid-container > form {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.pop-up-grid-container > h2 {
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.mail-popup {
+    border: none;
+    padding: .5rem;
+    width: 15rem;
+    border-radius: 5px;
+    opacity: 80%;
+}
+
+.close-newsletter {
+    width: 1.25rem;
+}
+
+.newsletter-img {
+    display: none;
+}
+
+/* js pop-up */
+.pop-up-box.active {
+    top: 25%;
+}
+
+/* ========== END POP UP NEWSLETTER ========== */
+
+/* ========== MOBILE CONTACT PAGE ========== */
+
+/* Contact form */
+
+.contact-form-background {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+
+/* j'utilise le pseudo element before et la position absolue (par rapport à son element parent) afin d'avoir un BG avec une opacité à 60% sans que le contenu ne soit affecté par l'opacité */
+.contact-form-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg-contact.jpg");
+    background-size: cover;
+    filter: opacity(.6);
+
+}
+
+/* sans la position relative, le contenu serait à nouveau avec une opacity à 60% */
+.contact-form {
+    position: relative;
+    border: 2px solid var(--gold);
+}
+
+.input-contact, textarea {
+    border: none;
+    background-color: var(--darker-font);
+    border-radius: 5px;
+    padding: 1rem;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+.input-contact::placeholder, textarea::placeholder {
+    letter-spacing: 1px;
+    color: white;
+}
+
+.input-contact[type=text]:focus {
+    border: none;
+}
+
+.contact-input-container {
+    display: grid;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+
+/* End contact form */
+
+/* infos section */
+
+/* one card */
+.info-card {
+    display: grid;
+    justify-items: center;
+
+    width: 11rem;
+    height: 12rem;
+    padding: 1rem 0;
+    gap: 1rem;
+
+    text-align: center;
+    color: white;
+    background-color: var(--darker-font);
+    border-radius: 5px;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+.info-card > h3 {
+    font-weight: bold;
+}
+
+.info-card > p {
+    margin: .5rem;
+}
+
+.info-icon {
+    width: 2rem;
+}
+
+/* all info card */
+.infos-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+    row-gap: 1.5rem;
+
+    margin-left: -1.5rem;
+    margin-bottom: -1.5rem;
+}
+
+.infos-frame {
+    width: 23.5rem;
+    border: 2px solid var(--gold);
+    padding-top: 1.5rem;
+}
+
+iframe {
+    width: 25rem;
+    height: 25rem;
+    border: 5px solid var(--darker-font);
+}
+
+.infos-container {
+    display: grid;
+    justify-items: center;
+    row-gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+/* newsletter mobile */
+.newsletter-mobile {
+    background-color: var(--darker-font);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.newsletter-mobile > p {
+    color: white;
+    margin-top: 2rem;
+}
+
+.news-form {
+    border: 2px solid var(--gold);
+    margin: 2rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: none;
+}
+
+.input-news {
+    background-color: var(--darker-font);
+    border: none;
+    padding: 1rem;
+}
+
+.mail {
+    width: 100%;
+}
+
+/* end infos section */
+
+/* ========== END MOBILE CONTACT PAGE ========== */
+
+/* ========== MOBILE GALLERY PAGE ========== */
+
+.big-card, .small-card {
+    display: grid;
+    justify-items: left;
+    gap: .5rem;
+}
+
+.gallery-card-title {
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.big-card > p, .small-card > p {
+    margin: 0;
+}
+
+.big-card > img, .small-card > img {
+    border-radius: 5px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    gap: 1.5rem;
+    grid-template-areas:
+    "big-1 small-1"
+    "big-1 big-2"
+    "small-2 big-2";
+}
+
+.big-1 {
+    grid-area: big-1;
+}
+
+.small-1 {
+    grid-area: small-1;
+}
+
+.small-2 {
+    grid-area: small-2;
+}
+
+.big-2 {
+    grid-area: big-2;
+}
+
+/* ========== END MOBILE GALLERY PAGE ========== */
+
+/* ========== MOBILE FOOTER ========== */
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-socials-media {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.scroll-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.go-up-arrow {
+    width: 3rem;
+}
+
+/* ========== END MOBILE FOOTER ========== */
+
+/* ========== RESPONSIVE TABLETTE ========== */
+
+/* class to toggle to show or hide content */
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* header section */
+    .header-container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        row-gap: 2rem;
+        grid-template-areas:
+            "img title"
+            "txt txt"
+            "socials socials";
+    }
+
+    .framed-header {
+        grid-area: img;
+        margin-left: 2rem;
+    }
+
+    .main-title {
+        grid-area: title;
+    }
+
+    .txt-intro {
+        grid-area: txt;
+    }
+
+    .socials-media {
+        grid-area: socials;
+    }
+
+    /* end header section */
+    /* univers section */
+    .grid-container-univers {
+        margin: 0 2rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'card1 card2'
+            'card3 card3';
+    }
+
+    .dark-card-univers {
+        grid-area: card1;
+    }
+
+    .light-card-univers {
+        grid-area: card2;
+    }
+
+    .dark-card-univers:last-child {
+        grid-area: card3;
+    }
+
+    /* end univers section */
+    /* best-sellers section */
+    .best-cards-container {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0;
+        margin: 0 3rem;
+    }
+
+    /* end best-sellers section */
+    /* origines section */
+    .origins-container {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+        grid-template-areas:
+        "txt1 img1"
+        "img2 txt2";
+    }
+
+    .origins-content:last-child {
+        grid-area: txt2;
+    }
+
+    .origins-content:first-child {
+        grid-area: txt1;
+    }
+
+    .cacao-frame {
+        grid-area: img1;
+    }
+
+    .cacao-frame:last-child {
+        grid-area: img2;
+    }
+
+    /* end origines section */
+    /* mini gallery section */
+    .mini-gallery-container {
+        margin-left: 6.25rem;
+        margin-right: 6.25rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+    "small1 big1 small2"
+    "big2   big1 big3"
+    "big2   big4 big3"
+    "small3 big4 small4";
+    }
+
+    /* end mini gallery section */
+    /* contact section */
+    .contact-form {
+        margin: 0 5rem;
+        padding: 0 4rem;
+    }
+
+    .infos-container {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 6rem;
+        align-items: center;
+    }
+
+    .footer-txt {
+        display: grid;
+        gap: 1rem;
+    }
+
+    /* end contact section */
+    /* newsletter */
+    .pop-up-box {
+        margin: 0 20%;
+    }
+
+    .pop-up-grid-container {
+        padding: 0 3.5rem;
+    }
+
+}
+
+/* end newsletter */
+/* ========== RESPONSIVE PC ========== */
+@media screen and (min-width: 992px) {
+    /* navbar */
+    .hamburger {
+        display: none;
+    }
+
+    .navbar {
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.75);
+    }
+
+    .nav-menu {
+        left: auto;
+        margin-top: 0;
+        padding-top: 0;
+        height: 5rem;
+
+        position: sticky;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        box-shadow: none;
+    }
+
+    .nav-link {
+        color: var(--gold);
+        padding-bottom: .2rem;
+    }
+
+    .nav-link:hover {
+        border-bottom: 2px solid var(--gold);
+    }
+
+    .nav-menu li:last-child {
+        display: none;
+    }
+
+    .mobile-menu-icons {
+        display: none;
+    }
+
+    /* end navbar */
+    /* pop up */
+    .close-newsletter, .see-more {
+        cursor: pointer;
+    }
+
+    /* end pop up */
+    /* header section */
+    .header-container {
+        grid-template-columns: 1fr 2fr 2fr;
+        justify-items: start;
+        margin: 0 2rem 2rem 2rem;
+        padding-top: 7rem;
+        grid-template-areas:
+            "socials img title"
+            "socials img txt";
+    }
+
+    .framed-header {
+        width: 25rem;
+    }
+
+    .socials-media {
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+        margin-bottom: 0;
+        margin-left: 6rem;
+    }
+
+    /* end header section */
+    /* univers section */
+    .grid-container-univers {
+        margin: 0 5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "card1 card2 card3";
+    }
+
+    #univers > h3 {
+        text-align: center;
+    }
+
+    /* end univers section */
+    /* best sellers section */
+    .best-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 4rem;
+    }
+
+    /* end best sellers section */
+    /* mini gallery */
+    /* container relative and hidden when not hovering */
+    .img-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hover-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: -100%;
+        height: 100%;
+        width: 100%;
+        padding: .625rem;
+        box-sizing: border-box;
+        transition: all 0.4s;
+    }
+
+    /* show my overlay */
+    .img-container:hover .hover-txt {
+        bottom: 0;
+    }
+
+    .arrow-voir-plus {
+        margin-left: 86%;
+    }
+
+    .voir-plus-txt {
+        padding: 0;
+        width: fit-content;
+        bottom: 0;
+        border-bottom: 1px solid var(--gold);
+    }
+
+    /* end mini gallery */
+    /* origines section */
+    .origins-content {
+        padding: 6rem;
+    }
+
+    .origins-content:last-child {
+        padding-right: 6rem;
+    }
+
+    .cacao-frame {
+        width: 25rem;
+    }
+
+    /* end origines section */
+    /* contact section */
+    .contact-form {
+        margin: 2rem 15rem;
+    }
+
+    .contact-input-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "name firstname"
+            "msg msg"
+            "send-btn send-btn";
+    }
+
+    .contact-input-container label[name="name"] {
+        grid-area: name;
+    }
+
+    .contact-input-container input[name="firstname"] {
+        grid-area: firstname;
+    }
+
+    .contact-input-container textarea {
+        grid-area: msg;
+    }
+
+    .contact-input-container button[type="submit"] {
+        grid-area: send-btn;
+    }
+
+    .infos-container {
+        margin: 0 4rem 6rem 4rem;
+    }
+
+    .newsletter-mobile {
+        text-align: center;
+        padding: 2rem 10rem;
+
+    }
+
+    .news-form input[type="submit"] {
+        cursor: pointer;
+    }
+
+    /* end contact section */
+    /* gallery section */
+    .first-part-gallery, .second-part-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.5rem;
+        margin: 2rem 6.25rem 0 6.25rem;
+    }
+
+    .second-part-gallery {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* end gallery section */
+    /* newsletter pop-up */
+    .newsletter-pc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter-img {
+        display: block;
+        width: 22rem;
+        object-fit: cover;
+    }
+
+    .pop-up-box {
+        padding-bottom: 0;
+    }
+
+    .pop-up-grid-container {
+        padding: 0;
+        gap: 0;
+        text-align: left;
+        margin-right: 4rem;
+    }
+
+    .pop-up-grid-container > h2 {
+        margin: 0;
+        padding-top: 5rem;
+        text-align: left;
+    }
+
+    .pop-up-grid-container > p {
+        margin: 0;
+    }
+
+    .pop-up-grid-container > form {
+        justify-items: left;
+    }
+
+    .mail-popup {
+        height: 3rem;
+        width: 100%;
+    }
+
+    #send-news {
+        height: 3rem;
+    }
+
+    /* js pop-up pc */
+    .pop-up-box.active {
+        top: 15%;
+    }
+
+    /* end newsletter pop-up */
+
+}
+
+/* ========== RESPONSIVE EXTRA LARGE ========== 1400 */
